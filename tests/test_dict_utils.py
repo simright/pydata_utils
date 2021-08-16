@@ -13,6 +13,7 @@ class TestDictUtils(unittest.TestCase):
 
         self.assertEqual(dict_utils.dict_get(mydict, ['key1', 'key1.1']), 2)
         self.assertEqual(dict_utils.dict_get(mydict, ['key1', 'badkey']), None)
+        self.assertEqual(dict_utils.dict_get(mydict, ['badkey1', 'badkey2']), None)
 
     def test_dict_set_item(self):
         mydict = {
