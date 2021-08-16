@@ -4,6 +4,8 @@ def dict_get(mydict, list_keys, default=None):
     num_keys = len(list_keys)
     if num_keys == 1:
         return mydict.get(list_keys[0], default)
+    elif list_keys[0] not in mydict:
+        return default
     else:
         return dict_get(mydict[list_keys[0]], list_keys[1:], default)
 
